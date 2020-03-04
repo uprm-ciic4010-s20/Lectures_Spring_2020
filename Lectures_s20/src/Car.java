@@ -58,7 +58,7 @@ public class Car {
 		g2D.draw(frontWindow);
 		g2D.draw(roof);
 		g2D.draw(rearWindow);
-		g2D.setColor(Color.BLUE);
+		g2D.setColor(color);
 		g2D.fill(body);
 	}
 

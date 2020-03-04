@@ -13,7 +13,7 @@ public class Canvas extends JComponent{
 		Car c1 = new Car(0,0,Color.BLUE);
 		c1.draw(g);
 
-		Car c2 = new Car(this.getWidth()-60,this.getHeight()-30,Color.BLUE);
+		Car c2 = new Car(this.getWidth()-60,this.getHeight()-30,Color.RED);
 		c2.draw(g);
 
 	}
