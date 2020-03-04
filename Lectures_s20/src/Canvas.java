@@ -1,9 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
 
 import javax.swing.JComponent;
 
@@ -12,38 +9,12 @@ public class Canvas extends JComponent{
 	public void paintComponent(Graphics g) {
 		// Draw Here
 		Graphics2D g2D = (Graphics2D) g;
-		//int grade = 3/4; // 75%  0.75
-		//double grade = 3/4.0 ; // 75%  0.75
-		//System.out.println("Grade: " + grade);
-		
-//		//Construct a Rectangle
-//		Rectangle box = new Rectangle(10,10,100,50);
-//		//g2D.draw(box);
-//		g2D.fill(box);
-//		
-//		box.translate(100, 100);
-//		g2D.draw(box);
-//		
-//		Ellipse2D.Double circle = new Ellipse2D.Double(200,200,100,50);
-//		g2D.draw(circle);
-		
-		//Construct a car
-		Rectangle body = new Rectangle(0,10,60,10);
-		Ellipse2D.Double frontTire = new Ellipse2D.Double(10,20,10,10);
-		Ellipse2D.Double rearTire = new Ellipse2D.Double(40,20,10,10);
-		Line2D.Double frontWindow = new Line2D.Double(10,10,20,0);
-		Line2D.Double roof = new Line2D.Double(20,0,40,0);
-		Line2D.Double rearWindow = new Line2D.Double(40,0,50,10);
-		
-		g2D.setColor(Color.BLACK);
-		g2D.fill(body);
-		g2D.fill(frontTire);
-		g2D.fill(rearTire);
-		g2D.draw(frontWindow);
-		g2D.draw(roof);
-		g2D.draw(rearWindow);
-		g2D.setColor(Color.BLUE);
-		g2D.fill(body);
-		
+
+		Car c1 = new Car(0,0,Color.BLUE);
+		c1.draw(g);
+
+		Car c2 = new Car(this.getWidth()-60,this.getHeight()-30,Color.BLUE);
+		c2.draw(g);
+
 	}
 }
