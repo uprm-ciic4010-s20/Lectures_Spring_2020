@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class Graphics {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		JFrame frame = new JFrame();
 		frame.setSize(400,600);
 		frame.setTitle("My Picture Frame");
@@ -12,6 +12,13 @@ public class Graphics {
 		frame.add(myCanvas);
 		
 		frame.setVisible(true);
+		
+		while(true) {
+			
+			frame.repaint();
+			Thread.sleep(100);
+			
+		}
 	}
 
 }
