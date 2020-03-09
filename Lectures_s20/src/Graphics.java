@@ -8,12 +8,12 @@ public class Graphics {
 		frame.setTitle("My Picture Frame");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Canvas myCanvas = new Canvas();
+		Canvas myCanvas = new Canvas(10);
 		frame.add(myCanvas);
 		
 		frame.setVisible(true);
 		
-		while(!myCanvas.carReachedBorder()) {
+		while(!myCanvas.aCarReachedBorder()) {
 			
 			frame.repaint();
 			Thread.sleep(100);
