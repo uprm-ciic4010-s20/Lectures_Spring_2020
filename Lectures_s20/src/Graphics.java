@@ -13,7 +13,7 @@ public class Graphics {
 		
 		frame.setVisible(true);
 		
-		while(true) {
+		while(!myCanvas.carReachedBorder()) {
 			
 			frame.repaint();
 			Thread.sleep(100);

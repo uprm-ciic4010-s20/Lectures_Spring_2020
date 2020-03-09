@@ -20,4 +20,10 @@ public class Canvas extends JComponent{
 //		c2.draw(g);
 
 	}
+	
+	public boolean carReachedBorder() {
+		
+		return (c1.getX()+60 >= this.getWidth());
+		
+	}
 }
