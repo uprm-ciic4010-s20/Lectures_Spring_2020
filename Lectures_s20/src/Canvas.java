@@ -30,12 +30,23 @@ public class Canvas extends JComponent{
 		// Draw Here
 		Graphics2D g2D = (Graphics2D) g;
 
+		int maxCarPos = 0;
+		for(int i=0; i<cars.length; i++) {
+			if (cars[maxCarPos].getX() < cars[i].getX()) {
+				maxCarPos = i;
+			}
+		}
+		cars[maxCarPos].setColor(Color.RED);
+		
 		for (int i=0; i<cars.length; i++) {
-			
 			int speed = this.speedGen.nextInt(10);
 			cars[i].draw(g);
 			cars[i].setX(cars[i].getX() + speed);
 		}
+		
+		cars[maxCarPos].setColor(Color.BLUE);
+		
+		
 
 		//		Car c2 = new Car(this.getWidth()-60,this.getHeight()-30,Color.RED);
 		//		c2.draw(g);
