@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.util.Random;
 
 import javax.swing.JComponent;
 
@@ -10,6 +11,8 @@ public class Canvas extends JComponent{
 	private final int NUM_CARS = 10;
 
 	Car cars[];
+	
+	Random speedGen = new Random();
 
 	int laneY = 0;
 	public Canvas(int numCars) {
@@ -27,8 +30,9 @@ public class Canvas extends JComponent{
 		// Draw Here
 		Graphics2D g2D = (Graphics2D) g;
 
-		int speed=5;
 		for (int i=0; i<cars.length; i++) {
+			
+			int speed = this.speedGen.nextInt(10);
 			cars[i].draw(g);
 			cars[i].setX(cars[i].getX() + speed);
 		}
